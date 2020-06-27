@@ -7,6 +7,10 @@ int main()
 
     time_t t;
 
+    printf("\t\t\t\t\t\tGuess The Lucky Number");
+    printf("\n\t\t\t\t\t\tDeveloped By Jack Pritom Soren");
+    printf("\n\t\t\t\t\t\tVersion:- 1.0\n\n\n");
+
     srand((unsigned)time(&t));
 
     int user_input;
