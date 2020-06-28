@@ -9,16 +9,20 @@ int main()
 
     printf("\t\t\t\t\t\tGuess The Lucky Number");
     printf("\n\t\t\t\t\t\tDeveloped By Jack Pritom Soren");
-    printf("\n\t\t\t\t\t\tVersion:- 1.0\n\n\n");
+    printf("\n\t\t\t\t\t\tVersion:- 2.0\n\n\n");
 
     srand((unsigned)time(&t));
 
-    int user_input;
+    int user_input,chance=4;
+
+    bool is_loss=true;
 
     int lucky_number = rand() % 10 + 1;
+
+    printf("You have only 4 chances\n\n");
     
 
-    while(true)
+    while(chance > 0)
     {
         printf("Guess The Lucky Number between 1 to 10 : ");
         scanf("%d",&user_input);
@@ -27,9 +31,18 @@ int main()
         {
             printf("Congratulation !");
 
+            is_loss=false;
+
             break;
         }
 
+        chance --;
 
+
+    }
+
+    if(is_loss)
+    {
+        printf("You have Loss! Lucky number is %d\n",lucky_number);
     }
 }
